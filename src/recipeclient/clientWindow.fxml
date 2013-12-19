@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxWidth="-1.0" prefHeight="350.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="recipeclient.FXMLDocumentController">
+  <children>
+    <HBox alignment="TOP_LEFT" layoutX="0.0" layoutY="0.0" prefHeight="350.0" prefWidth="503.0">
+      <children>
+        <ListView fx:id="typeLV" onKeyReleased="#handleTypeLVKey" onMouseClicked="#handleTypeLVClick" pickOnBounds="true" prefHeight="200.0" prefWidth="200.0" />
+        <ListView fx:id="entryLV" onKeyReleased="#handleEntryLVKey" onMouseClicked="#handleEntryLVClick" pickOnBounds="true" prefHeight="350.0" prefWidth="319.0" />
+      </children>
+    </HBox>
+    <Pane layoutX="503.0" layoutY="0.0" prefHeight="350.0" prefWidth="95.0">
+      <children>
+        <Button fx:id="newEntryB" disable="true" layoutX="4.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleAddAction" prefWidth="78.00002207031503" text="Новый" />
+        <Button fx:id="updEntryB" disable="true" layoutX="4.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleReplaceAction" prefWidth="78.00009999999747" text="Замена" />
+        <Button fx:id="removeEntryB" disable="true" layoutX="4.0" layoutY="52.0" mnemonicParsing="false" onAction="#handleRemoveAction" prefWidth="78.0" text="Удалить" />
+      </children>
+    </Pane>
+  </children>
+  <stylesheets>
+    <URL value="@clientwindow.css" />
+  </stylesheets>
+</AnchorPane>
